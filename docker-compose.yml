@@ -1,0 +1,13 @@
+services:
+  cicd:
+    image: cr.yandex/crp1m9q5vnm6trh9jbet/manage:latest
+    ports:
+      - 80:80
+    environment:
+      TZ: Europe/Moscow
+      TEST_ENV:
+    healthcheck:
+      test: curl --fail http://localhost/ || exit 1
+      interval: 5s
+      timeout: 3s
+      retries: 3
