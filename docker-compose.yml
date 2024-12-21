@@ -1,6 +1,6 @@
 services:
   cicd:
-    image: cr.yandex/crp1m9q5vnm6trh9jbet/manage:latest
+    image: ghcr.io/dsolomka/cicd:main
     ports:
       - 80:80
     environment:

@@ -58,5 +58,5 @@ jobs:
         key: ${{ secrets.SERVER_KEY }}
         port: 22
         script: |
-          TEST_ENV = "${{ secrets.TEST_ENV }}" \
+          TEST_ENV="${{ secrets.TEST_ENV }}" \
           docker compose -f /opt/cicd/docker-compose.yml up -d
